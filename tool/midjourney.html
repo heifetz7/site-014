@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midjourney完整评测 | AI绘画最强工具使用指南 - AI工具导航</title>
+    <meta name="description" content="Midjourney最全评测：V6新功能、提示词技巧、价格对比、与Stable Diffusion/DALL-E对比。2024年Midjourney使用完全指南。">
+    <link rel="canonical" href="https://heifetz7.github.io/ai-tools-nav/tool/midjourney.html">
+    
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --border: #475569;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+        
+        nav {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        .breadcrumb a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        
+        .tool-header {
+            display: grid;
+            grid-template-columns: 100px 1fr auto;
+            gap: 2rem;
+            align-items: center;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #1e1b4b 100%);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tool-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 1.5rem;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        .tool-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tool-title .subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        
+        .tool-meta {
+            text-align: right;
+        }
+        
+        .rating {
+            color: #fbbf24;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .price-tag {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4ade80;
+        }
+        
+        .infobox {
+            float: right;
+            width: 300px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 0 0 2rem 2rem;
+        }
+        
+        .infobox-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .infobox-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        
+        .infobox-table {
+            width: 100%;
+            font-size: 0.875rem;
+        }
+        
+        .infobox-table tr {
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .infobox-table td {
+            padding: 0.75rem 0;
+        }
+        
+        .infobox-table td:first-child {
+            color: var(--text-secondary);
+            width: 40%;
+        }
+        
+        .article-content h2 {
+            font-size: 1.75rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin: 2rem 0 1rem;
+            color: var(--accent-light);
+        }
+        
+        .article-content p {
+            margin-bottom: 1.25rem;
+            color: var(--text-secondary);
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 1rem 0 1.5rem 2rem;
+            color: var(--text-secondary);
+        }
+        
+        .article-content li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .highlight-box {
+            background: rgba(139, 92, 246, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            margin: 1.5rem 0;
+        }
+        
+        .highlight-box h4 {
+            color: var(--accent-light);
+            margin-bottom: 0.75rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.875rem;
+        }
+        
+        .comparison-table th {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+            border: 1px solid var(--accent);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+        
+        @media (max-width: 768px) {
+            .infobox {
+                float: none;
+                width: 100%;
+                margin: 0 0 2rem;
+            }
+            .tool-header {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .tool-logo { margin: 0 auto; }
+            .tool-meta { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="logo">🤖 AI工具导航</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../">首页</a> <span>/</span>
+            <a href="../category/ai-image.html">AI绘画</a> <span>/</span>
+            <span>Midjourney</span>
+        </div>
+        
+        <div class="tool-header">
+            <div class="tool-logo">🎨</div>
+            <div class="tool-title">
+                <h1>Midjourney</h1>
+                <div class="subtitle">最强AI绘画工具 · 艺术风格独特 · V6版本全新升级</div>
+            </div>
+            <div class="tool-meta">
+                <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+                <div class="price-tag">$10/月起</div>
+            </div>
+        </div>
+        
+        <article class="article-content">
+            <div class="infobox">
+                <div class="infobox-logo">🎨</div>
+                <div class="infobox-title">Midjourney</div>
+                <table class="infobox-table">
+                    <tr><td>开发商</td><td>Midjourney Inc</td></tr>
+                    <tr><td>发布日期</td><td>2022年7月</td></tr>
+                    <tr><td>最新版本</td><td>V6 (2023年12月)</td></tr>
+                    <tr><td>使用方式</td><td>Discord</td></tr>
+                    <tr><td>出图分辨率</td><td>最高4K (4096×4096)</td></tr>
+                    <tr><td>价格</td><td>$10-120/月</td></tr>
+                    <tr><td>官网</td><td><a href="https://midjourney.com" style="color: var(--accent-light);">midjourney.com</a></td></tr>
+                </table>
+            </div>
+            
+            <h2>Midjourney 是什么？</h2>
+            <p>Midjourney 是一款基于人工智能的图像生成工具，由同名独立研究实验室开发。它通过自然语言描述（提示词）生成高质量、艺术风格独特的图像，是目前公认最强的AI绘画工具之一。</p>
+            
+            <p>与其他AI绘画工具不同，Midjourney 专注于艺术化和美学效果，生成的图像具有独特的"Midjourney风格"——梦幻、细腻、富有想象力。它已成为概念艺术家、插画师、设计师和创意工作者的必备工具。</p>
+            
+            <div class="highlight-box">
+                <h4>💡 核心优势</h4>
+                <p>Midjourney V6 大幅提升了图像的真实感和细节表现力，特别是在文字渲染、材质表现和光影效果方面。新版本还支持更精确的提示词控制和风格参考功能。</p>
+            </div>
+            
+            <h2>Midjourney V6 新功能</h2>
+            
+            <h3>1. 更强的文字渲染能力</h3>
+            <p>V6 版本显著改善了图像中文字的渲染质量，可以生成清晰、准确的文字内容。使用时需要在提示词中将文字用引号包裹，如：a sign that says "Hello World"。</p>
+            
+            <h3>2. 更真实的图像质量</h3>
+            <p>V6 在真实感和细节方面大幅提升，皮肤纹理、头发丝、金属反光等细节更加逼真。同时保持了 Midjourney 独特的艺术美感。</p>
+            
+            <h3>3. 提示词理解增强</h3>
+            <p>新版本对自然语言的理解能力更强，可以更准确地呈现复杂的场景描述和多重概念组合。支持更长的提示词（超过350个字符）。</p>
+            
+            <h3>4. 风格参考功能</h3>
+            <p>支持--sref参数引用图片风格，可以轻松复制特定图像的风格特征，实现风格一致性控制。</p>
+            
+            <h2>价格方案对比</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>方案</th>
+                        <th>Basic ($10)</th>
+                        <th>Standard ($30)</th>
+                        <th>Pro ($60)</th>
+                        <th>Mega ($120)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fast GPU时间</td>
+                        <td>3.3小时/月</td>
+                        <td>15小时/月</td>
+                        <td>30小时/月</td>
+                        <td>60小时/月</td>
+                    </tr>
+                    <tr>
+                        <td>Relax模式</td>
+                        <td>❌</td>
+                        <td><strong>无限</strong></td>
+                        <td><strong>无限</strong></td>
+                        <td><strong>无限</strong></td>
+                    </tr>
+                    <tr>
+                        <td>并发任务</td>
+                        <td>3个</td>
+                        <td>3个</td>
+                        <td>12个</td>
+                        <td>12个</td>
+                    </tr>
+                    <tr>
+                        <td>隐身模式</td>
+                        <td>❌</td>
+                        <td>❌</td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h2>使用技巧</h2>
+            
+            <ol>
+                <li><strong>详细描述</strong>：提示词越详细，结果越符合预期。包含主体、环境、风格、光线、视角等元素</li>
+                <li><strong>使用参数</strong>：--ar设置宽高比，--v 6使用V6版本，--s控制风格化程度，--q控制质量</li>
+                <li><strong>多图对比</strong>：一次生成4张图，选择最满意的进行Upscale或Variation</li>
+                <li><strong>参考图片</strong>：上传参考图并复制链接，在提示词中使用--iw参数控制参考权重</li>
+                <li><strong>学习社区</strong>：关注Midjourney社区，学习他人的提示词技巧</li>
+            </ol>
+            
+            <h2>适合谁使用？</h2>
+            
+            <p>Midjourney 适合所有需要高质量视觉内容的创作者：概念艺术家可以用它快速生成灵感草图；插画师可以用它辅助创作；设计师可以用它制作概念图；内容创作者可以用它生成配图；甚至普通用户也可以用它将想象变为现实。</p>
+            
+            <div class="cta-box">
+                <h3>🎨 开始你的AI艺术创作之旅</h3>
+                <p>访问 Midjourney 官网，加入Discord开始创作</p>
+                <a href="https://midjourney.com" class="cta-button" target="_blank">访问 Midjourney 官网 →</a>
+            </div>
+        </article>
+    </div>
+    
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2024 AI工具导航。保留所有权利。</p>
+        </div>
+    </footer>
+</body>
+</html>

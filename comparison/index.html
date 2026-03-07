@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具对比评测 | ChatGPT vs Claude vs Midjourney 横向对比 - AI工具导航</title>
+    <meta name="description" content="热门AI工具横向对比：ChatGPT vs Claude、Midjourney vs Stable Diffusion、Runway vs Pika。功能、价格、优缺点全面对比分析。">
+    <link rel="canonical" href="https://heifetz7.github.io/ai-tools-nav/comparison/index.html">
+    
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --border: #475569;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        nav {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .nav-links a:hover { color: var(--text-primary); }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        .breadcrumb a { color: var(--accent-light); text-decoration: none; }
+        
+        .page-header {
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-bottom: 3rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .page-desc {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .comparison-section {
+            margin-bottom: 4rem;
+        }
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        .comparison-table th {
+            background: var(--bg-card);
+            padding: 1.25rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+        .comparison-table td {
+            padding: 1.25rem 1rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .comparison-table tr:hover {
+            background: rgba(255,255,255,0.02);
+        }
+        
+        .tool-name {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .tool-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+        
+        .rating {
+            color: #fbbf24;
+        }
+        .price {
+            font-weight: 600;
+            color: #4ade80;
+        }
+        .check { color: #4ade80; }
+        .cross { color: #f87171; }
+        
+        .cta-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+            border: 1px solid var(--accent);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .cta-box h3 {
+            margin-bottom: 1rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="logo">🤖 AI工具导航</a>
+            <ul class="nav-links">
+                <li><a href="../">首页</a></li>
+                <li><a href="../category/ai-writing.html">工具分类</a></li>
+                <li><a href="index.html">对比评测</a></li>
+                <li><a href="../blog/index.html">博客</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../">首页</a> <span>/</span>
+            <span>工具对比</span>
+        </div>
+        
+        <div class="page-header">
+            <h1>⚖️ AI工具对比评测</h1>
+            <p class="page-desc">热门AI工具横向对比，功能、价格、优缺点全面分析，帮你做出明智选择</p>
+        </div>
+        
+        <div class="comparison-section">
+            <h2 class="section-title">🤖 AI聊天助手对比</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>工具</th>
+                        <th>评分</th>
+                        <th>价格</th>
+                        <th>上下文长度</th>
+                        <th>联网搜索</th>
+                        <th>插件支持</th>
+                        <th>适合场景</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="tool-name">
+                                <div class="tool-icon" style="background: linear-gradient(135deg, #10a37f, #0d8c6d);">🤖</div>
+                                ChatGPT
+                            </div>
+                        </td>
+                        <td class="rating">⭐⭐⭐⭐⭐ 4.9</td>
+                        <td class="price">免费/$20</td>
+                        <td>128K</td>
+                        <td class="check">✓ (Plus)</td>
+                        <td class="check">✓ (Plus)</td>
+                        <td>通用对话、创意写作</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tool-name">
+                                <div class="tool-icon" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">💬</div>
+                                Claude
+                            </div>
+                        </td>
+                        <td class="rating">⭐⭐⭐⭐⭐ 4.8</td>
+                        <td class="price">免费/$20</td>
+                        <td><strong>200K</strong></td>
+                        <td class="cross">✗</td>
+                        <td class="cross">✗</td>
+                        <td>长文档分析、逻辑推理</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="comparison-section">
+            <h2 class="section-title">🎨 AI绘画工具对比</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>工具</th>
+                        <th>评分</th>
+                        <th>价格</th>
+                        <th>出图质量</th>
+                        <th>艺术风格</th>
+                        <th>可控性</th>
+                        <th>适合场景</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="tool-name">
+                                <div class="tool-icon" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">🎨</div>
+                                Midjourney
+                            </div>
+                        </td>
+                        <td class="rating">⭐⭐⭐⭐⭐ 4.9</td>
+                        <td class="price">$10起</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>独特艺术风</td>
+                        <td>中等</td>
+                        <td>艺术创作、概念设计</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tool-name">
+                                <div class="tool-icon" style="background: linear-gradient(135deg, #10b981, #059669);">🖼️</div>
+                                Stable Diffusion
+                            </div>
+                        </td>
+                        <td class="rating">⭐⭐⭐⭐ 4.7</td>
+                        <td class="price"><strong>免费</strong></td>
+                        <td>⭐⭐⭐⭐</td>
+                        <td>多样可定制</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>本地部署、定制模型</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="tool-name">
+                                <div class="tool-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">🎭</div>
+                                DALL-E 3
+                            </div>
+                        </td>
+                        <td class="rating">⭐⭐⭐⭐ 4.6</td>
+                        <td class="price">$20 (ChatGPT)</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>真实感强</td>
+                        <td>高</td>
+                        <td>提示词理解强</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="comparison-section">
+            <h2 class="section-title">🎬 AI视频工具对比</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>工具</th>
+                        <th>评分</th>
+                        <th>价格</th>
+                        <th>视频长度</th>
+                        <th>视频质量</th>
+                        <th>编辑功能</th>
+                        <th>适合场景</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="tool-name">
+                                <div class="tool-icon" style="background: linear-gradient(135deg, #d97706, #b45309);">🎬</div>
+                                Runway
+                            </div>
+                        </td>
+                        <td class="rating">⭐⭐⭐⭐⭐ 4.9</td>
+                        <td class="price">免费/$15起</td>
+                        <td>4-16秒</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td class="check">✓ 丰富</td>
+                        <td>专业视频制作</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="cta-box">
+            <h3>🚀 找到适合你的AI工具</h3>
+            <p>浏览完整工具列表，发现更多AI神器</p>
+            <a href="../category/ai-writing.html" class="cta-button">浏览全部工具 →</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>🤖 AI工具导航</h4>
+                <p style="color: var(--text-secondary); font-size: 0.875rem;">专业的AI工具导航平台，收录300+人工智能工具。</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 AI工具导航。保留所有权利。</p>
+        </div>
+    </footer>
+</body>
+</html>

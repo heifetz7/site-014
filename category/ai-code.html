@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI代码助手推荐 | 2024年最佳45款AI编程工具导航 - AI工具导航</title>
+    <meta name="description" content="精选45款最佳AI代码助手，包括GitHub Copilot、Codeium、Tabnine等。代码补全、Bug修复、代码审查工具一站式导航。">
+    <link rel="canonical" href="https://heifetz7.github.io/ai-tools-nav/category/ai-code.html">
+    
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --border: #475569;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        nav {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover { color: var(--text-primary); }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        .breadcrumb a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        
+        .category-header {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #1e1b4b 100%);
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .category-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .category-desc {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .category-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-light);
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        .content-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        .sidebar-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar-section h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar-list {
+            list-style: none;
+        }
+        
+        .sidebar-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .sidebar-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+        }
+        
+        .sidebar-list a:hover {
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+        
+        .main-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tools-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .tool-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            gap: 1.5rem;
+            transition: border-color 0.3s;
+        }
+        
+        .tool-item:hover {
+            border-color: var(--accent);
+        }
+        
+        .tool-logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .tool-info {
+            flex: 1;
+        }
+        
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+        
+        .tool-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        
+        .tool-title:hover {
+            color: var(--accent-light);
+        }
+        
+        .tool-rating {
+            color: #fbbf24;
+            font-size: 0.875rem;
+        }
+        
+        .tool-badges {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .badge {
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--accent-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+        }
+        
+        .badge-green {
+            background: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+        }
+        
+        .tool-desc {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tool-features {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .tool-action {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: flex-end;
+        }
+        
+        .price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #4ade80;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+        
+        .infobox {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .infobox h3 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .infobox-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.875rem;
+        }
+        
+        .infobox-item:last-child {
+            border-bottom: none;
+        }
+        
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 768px) {
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+            .sidebar { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="logo">🤖 AI工具导航</a>
+            <ul class="nav-links">
+                <li><a href="../">首页</a></li>
+                <li><a href="ai-writing.html">AI写作</a></li>
+                <li><a href="ai-image.html">AI绘画</a></li>
+                <li><a href="ai-code.html">AI代码</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../">首页</a> <span>/</span>
+            <span>AI代码助手</span>
+        </div>
+        
+        <div class="category-header">
+            <div class="category-icon">💻</div>
+            <h1>AI 代码助手</h1>
+            <p class="category-desc">精选45款最佳AI编程工具，从GitHub Copilot到免费替代品，让AI成为你的编程搭档，开发效率提升10倍</p>
+            <div class="category-stats">
+                <div class="stat">
+                    <div class="stat-number">45</div>
+                    <div class="stat-label">收录工具</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">20</div>
+                    <div class="stat-label">免费可用</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">4.8</div>
+                    <div class="stat-label">平均评分</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-layout">
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>📂 工具分类</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="ai-writing.html">✍️ AI写作工具</a></li>
+                        <li><a href="ai-image.html">🎨 AI绘画工具</a></li>
+                        <li><a href="ai-video.html">🎬 AI视频工具</a></li>
+                        <li><a href="ai-audio.html">🎵 AI音频工具</a></li>
+                        <li><a href="ai-code.html">💻 AI代码助手</a></li>
+                        <li><a href="ai-chat.html">💬 AI聊天助手</a></li>
+                        <li><a href="ai-office.html">📊 AI办公效率</a></li>
+                        <li><a href="ai-search.html">🔍 AI搜索引擎</a></li>
+                    </ul>
+                </div>
+            </aside>
+            
+            <div class="main-content">
+                <div class="infobox">
+                    <h3>📊 AI代码助手百科</h3>
+                    <div class="infobox-item">
+                        <span class="infobox-label">定义</span>
+                        <span>利用AI技术辅助编程的智能工具</span>
+                    </div>
+                    <div class="infobox-item">
+                        <span class="infobox-label">核心功能</span>
+                        <span>代码补全、Bug修复、代码解释、重构建议</span>
+                    </div>
+                    <div class="infobox-item">
+                        <span class="infobox-label">支持语言</span>
+                        <span>Python、JavaScript、Java、C++等30+种</span>
+                    </div>
+                    <div class="infobox-item">
+                        <span class="infobox-label">价格区间</span>
+                        <span>免费 - $19/月</span>
+                    </div>
+                </div>
+                
+                <h2>⭐ 推荐工具</h2>
+                
+                <div class="tools-list">
+                    <div class="tool-item">
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #7c3aed, #6d28d9);">💻</div>
+                        <div class="tool-info">
+                            <div class="tool-header">
+                                <a href="../tool/github-copilot.html" class="tool-title">GitHub Copilot</a>
+                                <span class="tool-rating">⭐⭐⭐⭐⭐ 4.9</span>
+                            </div>
+                            <div class="tool-badges">
+                                <span class="badge">代码补全</span>
+                                <span class="badge">IDE插件</span>
+                                <span class="badge badge-green">GitHub</span>
+                            </div>
+                            <p class="tool-desc">最强AI代码助手，基于OpenAI Codex模型，支持VS Code、JetBrains等主流IDE。代码补全精准，支持自然语言注释生成代码。</p>
+                            <div class="tool-features">
+                                <span>🎯 精准补全</span>
+                                <span>📝 注释生成</span>
+                                <span>🔧 多IDE支持</span>
+                            </div>
+                        </div>
+                        <div class="tool-action">
+                            <span class="price">$10/月</span>
+                            <a href="../tool/github-copilot.html" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #10b981, #059669);">⚡</div>
+                        <div class="tool-info">
+                            <div class="tool-header">
+                                <span class="tool-title">Codeium</span>
+                                <span class="tool-rating">⭐⭐⭐⭐ 4.7</span>
+                            </div>
+                            <div class="tool-badges">
+                                <span class="badge badge-green">完全免费</span>
+                                <span class="badge">无限使用</span>
+                                <span class="badge">70+ IDE</span>
+                            </div>
+                            <p class="tool-desc">免费的AI代码补全工具，个人用户完全免费且不限使用次数。支持70+ IDE和编辑器，是Copilot的最佳免费替代品。</p>
+                            <div class="tool-features">
+                                <span>🔓 完全免费</span>
+                                <span>∞ 无限补全</span>
+                                <span>🚀 速度快</span>
+                            </div>
+                        </div>
+                        <div class="tool-action">
+                            <span class="price">免费</span>
+                            <a href="#" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>🤖 AI工具导航</h4>
+                <p style="color: var(--text-secondary); font-size: 0.875rem;">专业的AI工具导航平台。</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 AI工具导航。保留所有权利。</p>
+        </div>
+    </footer>
+</body>
+</html>

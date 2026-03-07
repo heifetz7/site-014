@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI绘画工具推荐 | 2024年最佳38款AI绘图软件导航 - AI工具导航</title>
+    <meta name="description" content="精选38款最佳AI绘画工具，包括Midjourney、Stable Diffusion、DALL-E 3等。文生图、图生图、AI头像、设计辅助工具一站式导航。">
+    <meta name="keywords" content="AI绘画工具,Midjourney,Stable Diffusion,DALL-E,AI绘图软件,文生图,AI头像生成">
+    <link rel="canonical" href="https://heifetz7.github.io/ai-tools-nav/category/ai-image.html">
+    
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --border: #475569;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        nav {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover { color: var(--text-primary); }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        .breadcrumb a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        
+        .category-header {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #1e1b4b 100%);
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .category-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .category-desc {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .category-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-light);
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        
+        .content-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        .sidebar-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .sidebar-section h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .sidebar-list {
+            list-style: none;
+        }
+        
+        .sidebar-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .sidebar-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
+        }
+        
+        .sidebar-list a:hover {
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+        
+        .main-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .tools-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .tool-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            gap: 1.5rem;
+            transition: border-color 0.3s;
+        }
+        
+        .tool-item:hover {
+            border-color: var(--accent);
+        }
+        
+        .tool-logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        .tool-info {
+            flex: 1;
+        }
+        
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+        
+        .tool-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        
+        .tool-title:hover {
+            color: var(--accent-light);
+        }
+        
+        .tool-rating {
+            color: #fbbf24;
+            font-size: 0.875rem;
+        }
+        
+        .tool-badges {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .badge {
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--accent-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+        }
+        
+        .badge-green {
+            background: rgba(74, 222, 128, 0.2);
+            color: #4ade80;
+        }
+        
+        .tool-desc {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tool-features {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .tool-features span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .tool-action {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: flex-end;
+        }
+        
+        .price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #4ade80;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #7c3aed;
+        }
+        
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+        
+        .infobox {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .infobox h3 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .infobox-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.875rem;
+        }
+        
+        .infobox-item:last-child {
+            border-bottom: none;
+        }
+        
+        .infobox-label {
+            color: var(--text-secondary);
+        }
+        
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 768px) {
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+            .sidebar { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="logo">🤖 AI工具导航</a>
+            <ul class="nav-links">
+                <li><a href="../">首页</a></li>
+                <li><a href="ai-writing.html">AI写作</a></li>
+                <li><a href="ai-image.html">AI绘画</a></li>
+                <li><a href="ai-code.html">AI代码</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../">首页</a> <span>/</span>
+            <span>AI绘画工具</span>
+        </div>
+        
+        <div class="category-header">
+            <div class="category-icon">🎨</div>
+            <h1>AI 绘画工具</h1>
+            <p class="category-desc">精选38款最佳AI绘画软件，从Midjourney到Stable Diffusion，让文字变成艺术，让创意触手可及</p>
+            <div class="category-stats">
+                <div class="stat">
+                    <div class="stat-number">38</div>
+                    <div class="stat-label">收录工具</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">免费可用</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">4.7</div>
+                    <div class="stat-label">平均评分</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-layout">
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h3>📂 工具分类</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="ai-writing.html">✍️ AI写作工具</a></li>
+                        <li><a href="ai-image.html">🎨 AI绘画工具</a></li>
+                        <li><a href="ai-video.html">🎬 AI视频工具</a></li>
+                        <li><a href="ai-audio.html">🎵 AI音频工具</a></li>
+                        <li><a href="ai-code.html">💻 AI代码助手</a></li>
+                        <li><a href="ai-chat.html">💬 AI聊天助手</a></li>
+                        <li><a href="ai-office.html">📊 AI办公效率</a></li>
+                        <li><a href="ai-search.html">🔍 AI搜索引擎</a></li>
+                    </ul>
+                </div>
+            </aside>
+            
+            <div class="main-content">
+                <div class="infobox">
+                    <h3>📊 AI绘画工具百科</h3>
+                    <div class="infobox-item">
+                        <span class="infobox-label">定义</span>
+                        <span>利用AI技术将文字描述或图像转换为艺术作品的工具</span>
+                    </div>
+                    <div class="infobox-item">
+                        <span class="infobox-label">核心技术</span>
+                        <span>扩散模型、GAN、Transformer</span>
+                    </div>
+                    <div class="infobox-item">
+                        <span class="infobox-label">主流模型</span>
+                        <span>Midjourney V6、SDXL、DALL-E 3</span>
+                    </div>
+                    <div class="infobox-item">
+                        <span class="infobox-label">价格区间</span>
+                        <span>免费 - $30/月</span>
+                    </div>
+                </div>
+                
+                <h2>⭐ 推荐工具 (前5名)</h2>
+                
+                <div class="tools-list">
+                    <div class="tool-item">
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">🎨</div>
+                        <div class="tool-info">
+                            <div class="tool-header">
+                                <a href="../tool/midjourney.html" class="tool-title">Midjourney</a>
+                                <span class="tool-rating">⭐⭐⭐⭐⭐ 4.9</span>
+                            </div>
+                            <div class="tool-badges">
+                                <span class="badge">文生图</span>
+                                <span class="badge">艺术风格</span>
+                                <span class="badge badge-green">V6新版</span>
+                            </div>
+                            <p class="tool-desc">最强AI绘画工具之一，艺术风格独特唯美，细节表现力惊人。通过Discord使用，V6版本大幅提升了文字渲染和真实感。</p>
+                            <div class="tool-features">
+                                <span>🎨 艺术风格</span>
+                                <span>📝 文字渲染</span>
+                                <span>🖼️ 4K输出</span>
+                            </div>
+                        </div>
+                        <div class="tool-action">
+                            <span class="price">$10/月起</span>
+                            <a href="../tool/midjourney.html" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #10b981, #059669);">🖼️</div>
+                        <div class="tool-info">
+                            <div class="tool-header">
+                                <span class="tool-title">Stable Diffusion</span>
+                                <span class="tool-rating">⭐⭐⭐⭐⭐ 4.8</span>
+                            </div>
+                            <div class="tool-badges">
+                                <span class="badge badge-green">开源免费</span>
+                                <span class="badge">本地部署</span>
+                                <span class="badge">可定制</span>
+                            </div>
+                            <p class="tool-desc">开源AI绘画模型，可免费本地部署使用。社区生态丰富，数万款模型和LoRA可供下载，可定制性极强。</p>
+                            <div class="tool-features">
+                                <span>🔓 开源免费</span>
+                                <span>💻 本地运行</span>
+                                <span>🎭 模型丰富</span>
+                            </div>
+                        </div>
+                        <div class="tool-action">
+                            <span class="price">免费</span>
+                            <a href="#" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <div class="tool-logo" style="background: linear-gradient(135deg, #f59e0b, #d97706);">🎭</div>
+                        <div class="tool-info">
+                            <div class="tool-header">
+                                <span class="tool-title">DALL-E 3</span>
+                                <span class="tool-rating">⭐⭐⭐⭐ 4.7</span>
+                            </div>
+                            <div class="tool-badges">
+                                <span class="badge">OpenAI</span>
+                                <span class="badge">提示词理解</span>
+                                <span class="badge badge-green">ChatGPT内置</span>
+                            </div>
+                            <p class="tool-desc">OpenAI开发的文生图模型，对提示词理解能力极强，能准确呈现复杂场景和文字描述，已集成到ChatGPT Plus中。</p>
+                            <div class="tool-features">
+                                <span>🧠 理解力强</span>
+                                <span>🔤 文字准确</span>
+                                <span>🎨 风格多样</span>
+                            </div>
+                        </div>
+                        <div class="tool-action">
+                            <span class="price">$20/月</span>
+                            <a href="#" class="btn btn-secondary">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>🤖 AI工具导航</h4>
+                <p style="color: var(--text-secondary); font-size: 0.875rem;">专业的AI工具导航平台。</p>
+            </div>
+            <div class="footer-section">
+                <h4>工具分类</h4>
+                <ul>
+                    <li><a href="ai-writing.html">AI写作</a></li>
+                    <li><a href="ai-image.html">AI绘画</a></li>
+                    <li><a href="ai-code.html">AI代码</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 AI工具导航。保留所有权利。</p>
+        </div>
+    </footer>
+</body>
+</html>

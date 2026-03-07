@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具导航 - 收录300+人工智能工具 | AI写作绘画视频代码助手大全</title>
+    <meta name="description" content="专业的AI工具导航平台，收录300+人工智能工具，涵盖ChatGPT、Midjourney、Claude等AI写作、绘画、视频、代码工具，帮助用户快速找到最适合的AI解决方案。">
+    <meta name="keywords" content="AI工具,人工智能,ChatGPT,Midjourney,AI写作,AI绘画,AI视频,AI代码助手">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI工具导航 - 收录300+人工智能工具">
+    <meta property="og:description" content="专业的AI工具导航平台，涵盖AI写作、绘画、视频、代码等全类别工具">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://heifetz7.github.io/ai-tools-nav/">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://heifetz7.github.io/ai-tools-nav/">
+    
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --border: #475569;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        /* 导航 */
+        nav {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--bg-primary) 0%, #1e1b4b 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--accent-light);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        
+        .search-box button {
+            padding: 1rem 2rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .search-box button:hover {
+            background: #7c3aed;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-light);
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        /* 内容区 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-header p {
+            color: var(--text-secondary);
+        }
+        
+        /* 分类卡片 */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+        
+        .category-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: transform 0.3s, border-color 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+        
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .category-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .category-card p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .category-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        /* 热门工具 */
+        .tools-section {
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .filter-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-bar select {
+            padding: 0.75rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .tool-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: border-color 0.3s;
+        }
+        
+        .tool-card:hover {
+            border-color: var(--accent);
+        }
+        
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tool-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .tool-title {
+            flex: 1;
+        }
+        
+        .tool-title h4 {
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .tool-title span {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .tool-rating {
+            color: #fbbf24;
+        }
+        
+        .tool-desc {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tool-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .tag {
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--accent-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+        }
+        
+        .tool-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .tool-price {
+            font-weight: 600;
+            color: #4ade80;
+        }
+        
+        .tool-link {
+            color: var(--accent-light);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .tool-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* 广告位 */
+        .ad-section {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border: 1px dashed var(--accent);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .ad-section h3 {
+            color: var(--accent-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .ad-section p {
+            color: var(--text-secondary);
+        }
+        
+        /* 博客区 */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+        
+        .blog-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            overflow: hidden;
+            transition: border-color 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .blog-card:hover {
+            border-color: var(--accent);
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .blog-card h4 {
+            font-size: 1.125rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .blog-card p {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        /* 订阅 */
+        .subscribe-section {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #1e1b4b 100%);
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .subscribe-section h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .subscribe-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .subscribe-form {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .subscribe-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            background: var(--bg-card);
+            color: var(--text-primary);
+        }
+        
+        .subscribe-form button {
+            padding: 1rem 2rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        /* 页脚 */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+        
+        .footer-section a:hover {
+            color: var(--text-primary);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        /* FAQ 结构化数据区 */
+        .faq-section {
+            margin-bottom: 4rem;
+        }
+        
+        .faq-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.25rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem 1.25rem;
+            color: var(--text-secondary);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .stats {
+                gap: 1.5rem;
+            }
+            
+            .filter-bar {
+                flex-direction: column;
+            }
+        }
+    </style>
+    
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "什么是AI工具导航？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI工具导航是一个专业的人工智能工具聚合平台，收录了300+国内外优质AI工具，涵盖AI写作、AI绘画、AI视频、AI代码等8大类别，帮助用户快速找到适合自己需求的AI工具。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ChatGPT和Claude哪个更好用？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ChatGPT在创意写作和代码生成方面表现优秀，拥有庞大的用户基础和丰富的插件生态；Claude在超长文本处理（支持100K+上下文）和逻辑推理方面有优势。建议根据具体使用场景选择，两个工具都提供免费试用。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Midjourney和Stable Diffusion有什么区别？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Midjourney是云端AI绘画工具，操作简单，艺术风格独特，适合快速生成高质量图片，但需要订阅付费；Stable Diffusion是开源模型，可以本地部署，免费使用，可定制性更强，但对硬件要求较高。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "这些AI工具都是免费的吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "大多数AI工具都提供免费版本或免费试用，但高级功能通常需要付费。例如ChatGPT有免费版（GPT-3.5）和付费版（GPT-4）；Midjourney需要订阅；部分工具如Stable Diffusion可以完全免费本地运行。"
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Website Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI工具导航",
+        "url": "https://heifetz7.github.io/ai-tools-nav/",
+        "description": "收录300+人工智能工具的专业导航平台",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://heifetz7.github.io/ai-tools-nav/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- 导航 -->
+    <nav>
+        <div class="nav-container">
+            <a href="/ai-tools-nav/" class="logo">
+                <span class="logo-icon">🤖</span>
+                <span>AI工具导航</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/ai-tools-nav/">首页</a></li>
+                <li><a href="#categories">工具分类</a></li>
+                <li><a href="#featured">热门工具</a></li>
+                <li><a href="comparison/index.html">工具对比</a></li>
+                <li><a href="blog/index.html">资源博客</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>✨</span>
+                <span>收录 300+ 专业 AI 工具</span>
+            </div>
+            <h1>一站式 AI 工具导航平台</h1>
+            <p>精选全球优质人工智能工具，涵盖ChatGPT、Midjourney、Claude等AI写作、绘画、视频、代码助手，助您提升工作效率 10 倍</p>
+            <div class="search-box">
+                <input type="text" placeholder="搜索 AI 工具、功能或用途..." id="searchInput">
+                <button onclick="search()">🔍 搜索</button>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">300+</div>
+                    <div class="stat-label">收录工具</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">工具类别</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100K+</div>
+                    <div class="stat-label">月活跃用户</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">用户满意度</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 分类区 -->
+    <div class="container">
+        <div class="section-header" id="categories">
+            <h2>🗂️ 探索 AI 工具类别</h2>
+            <p>从AI写作到AI编程，我们覆盖了人工智能应用的每一个领域</p>
+        </div>
+        
+        <div class="categories-grid">
+            <a href="category/ai-writing.html" class="category-card">
+                <div class="category-icon">✍️</div>
+                <h3>AI 写作工具</h3>
+                <p>文案生成、文章创作、营销内容、邮件撰写等40+款工具</p>
+                <div class="category-meta">
+                    <span>42 款工具</span>
+                    <span>查看详情 →</span>
+                </div>
+            </a>
+            
+            <a href="category/ai-image.html" class="category-card">
+                <div class="category-icon">🎨</div>
+                <h3>AI 绘画工具</h3>
+                <p>文生图、图生图、AI头像、设计辅助等38+款工具</p>
+                <div class="category-meta">
+                    <span>38 款工具</span>
+                    <span>查看详情 →</span>
+                </div>
+            </a>
+            
+            <a href="category/ai-video.html" class="category-card">
+                <div class="category-icon">🎬</div>
+                <h3>AI 视频工具</h3>
+                <p>视频生成、数字人、视频剪辑、自动字幕等35+款工具</p>
+                <div class="category-meta">
+                    <span>35 款工具</span>
+                    <span>查看详情 →</span>
+                </div>
+            </a>
+            
+            <a href="category/ai-audio.html" class="category-card">
+                <div class="category-icon">🎵</div>
+                <h3>AI 音频工具</h3>
+                <p>文字转语音、语音克隆、AI音乐、降噪处理等28+款工具</p>
+                <div class="category-meta">
+                    <span>28 款工具</span>
+                    <span>查看详情 →</span>
+                </div>
+            </a>
+            
+            <a href="category/ai-code.html" class="category-card">
+                <div class="category-icon">💻</div>
+                <h3>AI 代码助手</h3>
+                <p>代码补全、代码生成、Bug修复、代码审查等45+款工具</p>
+                <div class="category-meta">
+                    <span>45 款工具</span>
+                    <span>查看详情 →</span>
+                </div>
+            </a>
+            
+            <a href="category/ai-chat.html" class="category-card">
+                <div class="category-icon">💬</div>
+                <h3>AI 聊天助手</h3>
+                <p>通用对话、专业知识、角色扮演、情感陪伴等25+款工具</p>
+                <div class="category-meta">
+                    <span>25 款工具</span>
+                    <span>查看详情 →</span>
+                </div>
+            </a>
+            
+            <a href="category/ai-office.html" class="category-card">
+                <div class="category-icon">📊</div>
+                <h3>AI 办公效率</h3>
+                <p>PPT生成、Excel助手、会议纪要、文档处理等32+款工具</p>
+                <div class="category-meta">
+                    <span>32 款工具</span>
+                    <span>查看详情 →</span>
+                </div>
+            </a>
+            
+            <a href="category/ai-search.html" class="category-card">
+                <div class="category-icon">🔍</div>
+                <h3>AI 搜索引擎</h3>
+                <p>智能搜索、知识问答、学术检索、信息聚合等22+款工具</p>
+                <div class="category-meta">
+                    <span>22 款工具</span>
+                    <span>查看详情 →</span>
+                </div>
+            </a>
+        </div>
+        
+        <!-- 广告位 -->
+        <div class="ad-section">
+            <h3>📢 赞助商广告位</h3>
+            <p>广告位招租 - 精准触达 AI 从业者与科技爱好者</p>
+        </div>
+        
+        <!-- 热门工具 -->
+        <div class="tools-section" id="featured">
+            <div class="section-header">
+                <h2>⭐ 本月热门 AI 工具</h2>
+                <p>根据用户评价、功能完整性和性价比精心挑选</p>
+            </div>
+            
+            <div class="filter-bar">
+                <select>
+                    <option>全部类别</option>
+                    <option>AI写作</option>
+                    <option>AI绘画</option>
+                    <option>AI视频</option>
+                    <option>AI代码</option>
+                </select>
+                <select>
+                    <option>全部价格</option>
+                    <option>免费</option>
+                    <option>免费+付费</option>
+                    <option>付费</option>
+                </select>
+                <select>
+                    <option>评分优先</option>
+                    <option>4.5星以上</option>
+                    <option>4星以上</option>
+                </select>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #10a37f, #0d8c6d);">🤖</div>
+                        <div class="tool-title">
+                            <h4>ChatGPT</h4>
+                            <span>OpenAI</span>
+                        </div>
+                        <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="tool-desc">全球最流行的AI聊天机器人，支持代码生成、创意写作、问答对话等多种任务，GPT-4版本功能强大</p>
+                    <div class="tool-tags">
+                        <span class="tag">聊天助手</span>
+                        <span class="tag">代码生成</span>
+                        <span class="tag">写作</span>
+                    </div>
+                    <div class="tool-footer">
+                        <span class="tool-price">免费 / $20/月</span>
+                        <a href="tool/chatgpt.html" class="tool-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">🎨</div>
+                        <div class="tool-title">
+                            <h4>Midjourney</h4>
+                            <span>Midjourney Inc</span>
+                        </div>
+                        <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="tool-desc">最强AI绘画工具之一，通过Discord使用，艺术风格独特，适合概念设计、插画创作、视觉艺术</p>
+                    <div class="tool-tags">
+                        <span class="tag">AI绘画</span>
+                        <span class="tag">文生图</span>
+                        <span class="tag">艺术创作</span>
+                    </div>
+                    <div class="tool-footer">
+                        <span class="tool-price">$10/月起</span>
+                        <a href="tool/midjourney.html" class="tool-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #d97706, #b45309);">🎬</div>
+                        <div class="tool-title">
+                            <h4>Runway</h4>
+                            <span>Runway ML</span>
+                        </div>
+                        <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="tool-desc">一站式AI视频创作平台，支持Gen-2视频生成、视频编辑、绿幕抠像、运动追踪等专业功能</p>
+                    <div class="tool-tags">
+                        <span class="tag">AI视频</span>
+                        <span class="tag">视频编辑</span>
+                        <span class="tag">Gen-2</span>
+                    </div>
+                    <div class="tool-footer">
+                        <span class="tool-price">免费 / $15/月</span>
+                        <a href="tool/runway.html" class="tool-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #7c3aed, #6d28d9);">💻</div>
+                        <div class="tool-title">
+                            <h4>GitHub Copilot</h4>
+                            <span>GitHub × OpenAI</span>
+                        </div>
+                        <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="tool-desc">最强AI代码助手，支持多种编程语言，代码补全精准，大幅提升开发效率，开发者必备工具</p>
+                    <div class="tool-tags">
+                        <span class="tag">代码补全</span>
+                        <span class="tag">IDE插件</span>
+                        <span class="tag">开发工具</span>
+                    </div>
+                    <div class="tool-footer">
+                        <span class="tool-price">$10/月</span>
+                        <a href="tool/github-copilot.html" class="tool-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #dc2626, #b91c1c);">🎵</div>
+                        <div class="tool-title">
+                            <h4>Suno AI</h4>
+                            <span>Suno</span>
+                        </div>
+                        <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="tool-desc">革命性AI音乐生成工具，输入文字描述即可生成完整歌曲，包括人声和伴奏，音乐创作零门槛</p>
+                    <div class="tool-tags">
+                        <span class="tag">AI音乐</span>
+                        <span class="tag">歌曲生成</span>
+                        <span class="tag">文生音乐</span>
+                    </div>
+                    <div class="tool-footer">
+                        <span class="tool-price">免费 / $8/月</span>
+                        <a href="tool/suno.html" class="tool-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon" style="background: linear-gradient(135deg, #0891b2, #0e7490);">🔍</div>
+                        <div class="tool-title">
+                            <h4>Perplexity</h4>
+                            <span>Perplexity AI</span>
+                        </div>
+                        <div class="tool-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="tool-desc">AI驱动的搜索引擎，提供带引用来源的答案，实时联网搜索，是研究和学习的强大助手</p>
+                    <div class="tool-tags">
+                        <span class="tag">AI搜索</span>
+                        <span class="tag">知识问答</span>
+                        <span class="tag">学术研究</span>
+                    </div>
+                    <div class="tool-footer">
+                        <span class="tool-price">免费 / $20/月</span>
+                        <a href="tool/perplexity.html" class="tool-link">查看详情 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 广告位 -->
+        <div class="ad-section">
+            <h3>📢 赞助商广告位</h3>
+            <p>广告位招租 - 联系广告主获取精准曝光机会</p>
+        </div>
+        
+        <!-- FAQ 区 -->
+        <div class="faq-section">
+            <div class="section-header">
+                <h2>❓ 常见问题</h2>
+                <p>关于AI工具的常见疑问解答</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>什么是AI工具导航？</span>
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    AI工具导航是一个专业的人工智能工具聚合平台，收录了300+国内外优质AI工具，涵盖AI写作、AI绘画、AI视频、AI代码等8大类别，帮助用户快速找到适合自己需求的AI工具。
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>ChatGPT和Claude哪个更好用？</span>
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    ChatGPT在创意写作和代码生成方面表现优秀，拥有庞大的用户基础和丰富的插件生态；Claude在超长文本处理（支持100K+上下文）和逻辑推理方面有优势。建议根据具体使用场景选择，两个工具都提供免费试用。
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Midjourney和Stable Diffusion有什么区别？</span>
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    Midjourney是云端AI绘画工具，操作简单，艺术风格独特，适合快速生成高质量图片，但需要订阅付费；Stable Diffusion是开源模型，可以本地部署，免费使用，可定制性更强，但对硬件要求较高。
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>这些AI工具都是免费的吗？</span>
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    大多数AI工具都提供免费版本或免费试用，但高级功能通常需要付费。例如ChatGPT有免费版（GPT-3.5）和付费版（GPT-4）；Midjourney需要订阅；部分工具如Stable Diffusion可以完全免费本地运行。
+                </div>
+            </div>
+        </div>
+        
+        <!-- 博客区 -->
+        <div class="section-header">
+            <h2>📚 AI 学习与洞察</h2>
+            <p>最新的AI工具评测、使用教程和行业趋势</p>
+        </div>
+        
+        <div class="blog-grid">
+            <a href="blog/best-ai-tools-2024.html" class="blog-card">
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 2024年3月10日</span>
+                        <span>📁 工具评测</span>
+                    </div>
+                    <h4>2024年最佳AI工具Top 20排行榜</h4>
+                    <p>我们测试了超过300款AI工具，为您精选出年度最佳选择。从ChatGPT到Midjourney，全面覆盖...</p>
+                </div>
+            </a>
+            
+            <a href="blog/chatgpt-vs-claude.html" class="blog-card">
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 2024年3月8日</span>
+                        <span>📁 对比评测</span>
+                    </div>
+                    <h4>ChatGPT vs Claude：哪个AI助手更适合你？</h4>
+                    <p>深度对比两款最受欢迎的AI聊天工具，从功能、价格、使用场景等多个维度进行分析...</p>
+                </div>
+            </a>
+            
+            <a href="blog/midjourney-guide.html" class="blog-card">
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 2024年3月5日</span>
+                        <span>📁 教程指南</span>
+                    </div>
+                    <h4>Midjourney完整使用指南：从入门到精通</h4>
+                    <p>一步步教你掌握Midjourney提示词技巧，生成专业级AI艺术作品...</p>
+                </div>
+            </a>
+            
+            <a href="blog/ai-future-trends.html" class="blog-card">
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>📅 2024年3月1日</span>
+                        <span>📁 行业趋势</span>
+                    </div>
+                    <h4>2024年AI工具发展趋势预测</h4>
+                    <p>探索人工智能技术的未来发展方向，从多模态模型到Agent智能体的全面变革...</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- 订阅 -->
+        <div class="subscribe-section">
+            <h2>📧 订阅 AI 工具周报</h2>
+            <p>获取最新工具评测、优惠信息和AI使用技巧，每周直接发送到您的邮箱</p>
+            <div class="subscribe-form">
+                <input type="email" placeholder="输入您的邮箱地址">
+                <button>立即订阅</button>
+            </div>
+            <p style="font-size: 0.875rem; margin-top: 1rem;">🔒 我们尊重您的隐私，不会发送垃圾邮件</p>
+        </div>
+    </div>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo" style="margin-bottom: 1rem;">
+                    <span class="logo-icon">🤖</span>
+                    <span>AI工具导航</span>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.875rem;">专业的AI工具导航平台，收录300+人工智能工具，帮助用户找到最适合的AI解决方案。</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>工具分类</h4>
+                <ul>
+                    <li><a href="category/ai-writing.html">AI 写作工具</a></li>
+                    <li><a href="category/ai-image.html">AI 绘画工具</a></li>
+                    <li><a href="category/ai-video.html">AI 视频工具</a></li>
+                    <li><a href="category/ai-code.html">AI 代码助手</a></li>
+                    <li><a href="category/ai-chat.html">AI 聊天助手</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>更多分类</h4>
+                <ul>
+                    <li><a href="category/ai-audio.html">AI 音频工具</a></li>
+                    <li><a href="category/ai-office.html">AI 办公效率</a></li>
+                    <li><a href="category/ai-search.html">AI 搜索引擎</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>资源</h4>
+                <ul>
+                    <li><a href="blog/index.html">博客文章</a></li>
+                    <li><a href="comparison/index.html">工具对比</a></li>
+                    <li><a href="#">AI 工具提交</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2024 AI工具导航。保留所有权利。</p>
+        </div>
+    </footer>
+    
+    <script>
+        function search() {
+            const query = document.getElementById('searchInput').value;
+            if (query) {
+                alert('搜索功能演示：搜索 "' + query + '"');
+            }
+        }
+        
+        // FAQ 交互
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const arrow = item.querySelector('span:last-child');
+                if (answer.style.display === 'none' || !answer.style.display) {
+                    answer.style.display = 'block';
+                    arrow.textContent = '▲';
+                } else {
+                    answer.style.display = 'none';
+                    arrow.textContent = '▼';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

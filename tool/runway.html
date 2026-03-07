@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runway Gen-2完整评测 | AI视频生成最强工具 - AI工具导航</title>
+    <meta name="description" content="Runway Gen-2最全评测：文生视频、图生视频、视频编辑功能详解。价格、使用教程、与Pika对比。2024年AI视频生成完全指南。">
+    <link rel="canonical" href="https://heifetz7.github.io/ai-tools-nav/tool/runway.html">
+    
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --border: #475569;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+        nav {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        .breadcrumb a { color: var(--accent-light); text-decoration: none; }
+        .tool-header {
+            display: grid;
+            grid-template-columns: 100px 1fr auto;
+            gap: 2rem;
+            align-items: center;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #1e1b4b 100%);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .tool-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 1.5rem;
+            background: linear-gradient(135deg, #d97706, #b45309);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        .tool-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tool-title .subtitle { color: var(--text-secondary); font-size: 1rem; }
+        .tool-meta { text-align: right; }
+        .rating { color: #fbbf24; font-size: 1.25rem; margin-bottom: 0.5rem; }
+        .price-tag { font-size: 1.5rem; font-weight: 700; color: #4ade80; }
+        .infobox {
+            float: right;
+            width: 300px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 0 0 2rem 2rem;
+        }
+        .infobox-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .infobox-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, #d97706, #b45309);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        .infobox-table { width: 100%; font-size: 0.875rem; }
+        .infobox-table tr { border-bottom: 1px solid var(--border); }
+        .infobox-table td { padding: 0.75rem 0; }
+        .infobox-table td:first-child { color: var(--text-secondary); width: 40%; }
+        .article-content h2 {
+            font-size: 1.75rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin: 2rem 0 1rem;
+            color: var(--accent-light);
+        }
+        .article-content p {
+            margin-bottom: 1.25rem;
+            color: var(--text-secondary);
+        }
+        .article-content ul, .article-content ol {
+            margin: 1rem 0 1.5rem 2rem;
+            color: var(--text-secondary);
+        }
+        .article-content li { margin-bottom: 0.75rem; }
+        .highlight-box {
+            background: rgba(139, 92, 246, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            margin: 1.5rem 0;
+        }
+        .highlight-box h4 { color: var(--accent-light); margin-bottom: 0.75rem; }
+        .cta-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+            border: 1px solid var(--accent);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+        @media (max-width: 768px) {
+            .infobox { float: none; width: 100%; margin: 0 0 2rem; }
+            .tool-header { grid-template-columns: 1fr; text-align: center; }
+            .tool-logo { margin: 0 auto; }
+            .tool-meta { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="logo">🤖 AI工具导航</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../">首页</a> <span>/</span>
+            <a href="../category/ai-video.html">AI视频</a> <span>/</span>
+            <span>Runway</span>
+        </div>
+        
+        <div class="tool-header">
+            <div class="tool-logo">🎬</div>
+            <div class="tool-title">
+                <h1>Runway</h1>
+                <div class="subtitle">AI视频生成最强工具 · Gen-2文生视频 · 一站式创作平台</div>
+            </div>
+            <div class="tool-meta">
+                <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+                <div class="price-tag">免费/$15起</div>
+            </div>
+        </div>
+        
+        <article class="article-content">
+            <div class="infobox">
+                <div class="infobox-logo">🎬</div>
+                <div class="infobox-title">Runway</div>
+                <table class="infobox-table">
+                    <tr><td>开发商</td><td>Runway ML</td></tr>
+                    <tr><td>成立时间</td><td>2018年</td></tr>
+                    <tr><td>最新版本</td><td>Gen-2</td></tr>
+                    <tr><td>使用方式</td><td>Web端/桌面端</td></tr>
+                    <tr><td>输出分辨率</td><td>1080p/4K</td></tr>
+                    <tr><td>价格</td><td>免费版-76$/月</td></tr>
+                    <tr><td>官网</td><td><a href="https://runwayml.com" style="color: var(--accent-light);">runwayml.com</a></td></tr>
+                </table>
+            </div>
+            
+            <h2>Runway 是什么？</h2>
+            <p>Runway 是一款基于人工智能的一站式视频创作平台，由 Runway ML 公司开发。它提供从视频生成到编辑的完整工具链，是目前最强大的AI视频工具之一。</p>
+            
+            <p>Runway 的核心功能 Gen-2 支持文生视频（Text to Video）和图生视频（Image to Video），可以将文字描述或静态图片转换为动态视频内容。此外，它还提供绿幕抠像、运动追踪、视频修复等专业功能。</p>
+            
+            <div class="highlight-box">
+                <h4>💡 核心优势</h4>
+                <p>Runway Gen-2 是目前商业化程度最高、效果最稳定的AI视频生成工具。支持4秒和16秒视频生成，画面连贯性和真实感在同类产品中领先。</p>
+            </div>
+            
+            <h2>主要功能</h2>
+            
+            <h3>1. Gen-2 文生视频</h3>
+            <p>输入文字描述，AI自动生成视频片段。支持调节相机运动、运动幅度等参数，生成的视频具有较好的时间连贯性。</p>
+            
+            <h3>2. Gen-2 图生视频</h3>
+            <p>上传静态图片，AI为其添加动态效果生成视频。适合将AI绘画作品、产品照片等转换为动态内容。</p>
+            
+            <h3>3. 视频编辑工具</h3>
+            <p>提供绿幕抠像（Remove Background）、运动追踪（Motion Tracking）、视频修复（Inpainting）等专业后期功能。</p>
+            
+            <h3>4. 图像生成</td>
+            <p>除视频外，Runway 还提供图像生成和编辑功能，包括无限画布扩展（Infinite Image）、图像修复等。</p>
+            
+            <h2>适合谁使用？</h2>
+            
+            <p>Runway 适合视频创作者、广告从业者、内容营销人员、影视后期制作人员等。对于需要快速生成创意视频内容、制作概念视频、或者为社交媒体创作短视频的用户来说，Runway 是不可或缺的工具。</p>
+            
+            <div class="cta-box">
+                <h3>🎬 开始AI视频创作</h3>
+                <p>访问 Runway 官网，免费体验 Gen-2 的强大功能</p>
+                <a href="https://runwayml.com" class="cta-button" target="_blank">访问 Runway 官网 →</a>
+            </div>
+        </article>
+    </div>
+    
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2024 AI工具导航。保留所有权利。</p>
+        </div>
+    </footer>
+</body>
+</html>

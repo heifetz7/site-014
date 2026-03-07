@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Copilot完整评测 | AI代码助手使用指南 - AI工具导航</title>
+    <meta name="description" content="GitHub Copilot最全评测：功能详解、学生免费申请、与Codeium/Tabnine对比。2024年AI编程助手使用完全指南。">
+    <link rel="canonical" href="https://heifetz7.github.io/ai-tools-nav/tool/github-copilot.html">
+    
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --border: #475569;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+        nav {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+        .breadcrumb a { color: var(--accent-light); text-decoration: none; }
+        .tool-header {
+            display: grid;
+            grid-template-columns: 100px 1fr auto;
+            gap: 2rem;
+            align-items: center;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #1e1b4b 100%);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .tool-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 1.5rem;
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        .tool-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tool-title .subtitle { color: var(--text-secondary); font-size: 1rem; }
+        .tool-meta { text-align: right; }
+        .rating { color: #fbbf24; font-size: 1.25rem; margin-bottom: 0.5rem; }
+        .price-tag { font-size: 1.5rem; font-weight: 700; color: #4ade80; }
+        .infobox {
+            float: right;
+            width: 300px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 0 0 2rem 2rem;
+        }
+        .infobox-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .infobox-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        .infobox-table { width: 100%; font-size: 0.875rem; }
+        .infobox-table tr { border-bottom: 1px solid var(--border); }
+        .infobox-table td { padding: 0.75rem 0; }
+        .infobox-table td:first-child { color: var(--text-secondary); width: 40%; }
+        .article-content h2 {
+            font-size: 1.75rem;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border);
+        }
+        .article-content h3 {
+            font-size: 1.25rem;
+            margin: 2rem 0 1rem;
+            color: var(--accent-light);
+        }
+        .article-content p {
+            margin-bottom: 1.25rem;
+            color: var(--text-secondary);
+        }
+        .article-content ul, .article-content ol {
+            margin: 1rem 0 1.5rem 2rem;
+            color: var(--text-secondary);
+        }
+        .article-content li { margin-bottom: 0.75rem; }
+        .highlight-box {
+            background: rgba(139, 92, 246, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 1.5rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            margin: 1.5rem 0;
+        }
+        .highlight-box h4 { color: var(--accent-light); margin-bottom: 0.75rem; }
+        .cta-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+            border: 1px solid var(--accent);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+        @media (max-width: 768px) {
+            .infobox { float: none; width: 100%; margin: 0 0 2rem; }
+            .tool-header { grid-template-columns: 1fr; text-align: center; }
+            .tool-logo { margin: 0 auto; }
+            .tool-meta { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../" class="logo">🤖 AI工具导航</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../">首页</a> <span>/</span>
+            <a href="../category/ai-code.html">AI代码</a> <span>/</span>
+            <span>GitHub Copilot</span>
+        </div>
+        
+        <div class="tool-header">
+            <div class="tool-logo">💻</div>
+            <div class="tool-title">
+                <h1>GitHub Copilot</h1>
+                <div class="subtitle">最强AI代码助手 · GitHub × OpenAI · 开发者必备</div>
+            </div>
+            <div class="tool-meta">
+                <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
+                <div class="price-tag">$10/月</div>
+            </div>
+        </div>
+        
+        <article class="article-content">
+            <div class="infobox">
+                <div class="infobox-logo">💻</div>
+                <div class="infobox-title">GitHub Copilot</div>
+                <table class="infobox-table">
+                    <tr><td>开发商</td><td>GitHub × OpenAI</td></tr>
+                    <tr><td>发布时间</td><td>2021年6月</td></tr>
+                    <tr><td>基础模型</td><td>OpenAI Codex</td></tr>
+                    <tr><td>支持IDE</td><td>VS Code, JetBrains等</td></tr>
+                    <tr><td>支持语言</td><td>Python, JS, Java等30+</td></tr>
+                    <tr><td>价格</td><td>$10/月或$100/年</td></tr>
+                    <tr><td>学生/开源</td><td><strong>免费</strong></td></tr>
+                </table>
+            </div>
+            
+            <h2>GitHub Copilot 是什么？</h2>
+            <p>GitHub Copilot 是由 GitHub 和 OpenAI 联合开发的AI代码助手，基于 OpenAI Codex 模型。它集成在代码编辑器中，能够实时分析代码上下文，提供整行或整段的代码补全建议。</p>
+            
+            <p>Copilot 被称为"AI结对程序员"，它不仅可以补全代码，还能根据注释生成代码、解释代码功能、提供替代实现方案等。据统计，使用 Copilot 的开发者编码速度平均提升 55%。</p>
+            
+            <div class="highlight-box">
+                <h4>💡 核心优势</h4>
+                <p>GitHub Copilot 拥有最广泛的代码训练数据，代码补全精准度高，对主流编程语言和框架支持完善。GitHub 的全球代码库让它在各种编程场景下都能提供高质量建议。</p>
+            </div>
+            
+            <h2>主要功能</h2>
+            
+            <h3>1. 代码自动补全</h3>
+            <p>根据代码上下文实时提供整行或整函数的补全建议。支持多种编程语言，对重复性代码、样板代码尤其有效。</p>
+            
+            <h3>2. 注释生成代码</h3>
+            <p>用自然语言描述需求，Copilot 自动生成对应代码。例如输入"// 计算斐波那契数列"，它会自动生成实现代码。</p>
+            
+            <h3>3. 测试代码生成</h3>
+            <p>根据已有函数自动生成单元测试代码，支持多种测试框架。</p>
+            
+            <h3>4. Copilot Chat</h3>
+            <p>对话式AI助手，可以询问代码问题、请求解释、寻求重构建议等。</p>
+            
+            <h2>学生免费申请</h2>
+            
+            <p>GitHub Copilot 对认证的学生和教师完全免费。申请条件：</p>
+            
+            <ol>
+                <li>拥有 GitHub 账号</li>
+                <li>通过 GitHub Student Developer Pack 认证学生身份</li>
+                <li>使用学校邮箱或上传学生证</li>
+            </ol>
+            
+            <p>认证通过后，可免费使用 Copilot 直至毕业。开源项目维护者也可申请免费使用。</p>
+            
+            <h2>适合谁使用？</h2>
+            
+            <p>GitHub Copilot 适合所有程序员：新手可以学习代码写法；中级开发者可以提高效率；高级开发者可以减少重复工作。特别推荐Web开发、Python数据科学、Java企业开发等领域的开发者使用。</p>
+            
+            <div class="cta-box">
+                <h3>💻 提升你的编程效率</h3>
+                <p>访问 GitHub Copilot 官网，开启AI编程之旅</p>
+                <a href="https://github.com/features/copilot" class="cta-button" target="_blank">访问 GitHub Copilot →</a>
+            </div>
+        </article>
+    </div>
+    
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2024 AI工具导航。保留所有权利。</p>
+        </div>
+    </footer>
+</body>
+</html>
